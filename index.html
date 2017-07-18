@@ -8,7 +8,7 @@
     <meta name="description" content="start from zero">
 <meta property="og:type" content="website">
 <meta property="og:title" content="符东日 | blog">
-<meta property="og:url" content="http://galigeigei.org/index.html">
+<meta property="og:url" content="http://wwww.galigeigei.org/index.html">
 <meta property="og:site_name" content="符东日 | blog">
 <meta property="og:description" content="start from zero">
 <meta property="og:locale" content="zh-CN">
@@ -18,9 +18,11 @@
     
 
     
-        <link rel="alternate" href="/" title="符东日 | blog" type="application/atom+xml" />
+        <link rel="alternate" href="atom.xml" title="符东日 | blog" type="application/atom+xml" />
     
 
+    
+        <link rel="icon" href="/favicon.ico# path to favicon" />
     
 
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
@@ -58,6 +60,8 @@
                     <a class="main-nav-link" href="/">首页</a>
                 
                     <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
                 
                     <a class="main-nav-link" href="/about">关于</a>
                 
@@ -119,6 +123,8 @@
                     <td><a class="main-nav-link" href="/">首页</a></td>
                 
                     <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
                 
                     <td><a class="main-nav-link" href="/about">关于</a></td>
                 
@@ -188,7 +194,7 @@
                     </td>
                     
                     <td>
-                        <a href="/" target="_blank" title="rss" class=tooltip>
+                        <a href="/atom.xml" target="_blank" title="rss" class=tooltip>
                             <i class="fa fa-rss"></i>
                         </a>
                     </td>
@@ -202,7 +208,7 @@
 
             
             <section id="main">
-    <article id="post-首次测试" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-test/首次测试" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -210,7 +216,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/首次测试/">首次测试</a>
+            <a class="article-title" href="/test/首次测试/">首次测试</a>
         </h1>
     
 
@@ -219,19 +225,13 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/首次测试/">
+        <a href="/test/首次测试/">
             <time datetime="2017-07-18T15:42:23.000Z" itemprop="datePublished">2017-07-18</time>
         </a>
     </div>
 
 
                         
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/test-java-cloud-呵呵-无敌-计算/">test java cloud 呵呵 无敌  计算</a>
-    </div>
-
                     </div>
                 
             </header>
@@ -239,103 +239,25 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h4 id="测-试"><a href="#测-试" class="headerlink" title="测 试"></a>测 试</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    System.out.println(<span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="帅"><a href="#帅" class="headerlink" title="帅"></a>帅</h1><ul>
-<li>Red</li>
-</ul>
-<ul>
-<li>Green</li>
-</ul>
-<ul>
-<li>Blue</li>
-</ul>
-<p><a href="https://www.baidu.com/" target="_blank" rel="external">baidu</a></p>
-
+            <p><h2 id="测-试"><a href="#测-试" class="headerlink" title="测 试"></a>测 试</h2><h3 id="测-试-1"><a href="#测-试-1" class="headerlink" title="测 试"></a>测 试</h3><p><a href="https://www.baidu.com/" target="_blank" rel="external">baidu</a></p></p>
+            <p class="article-more-link">
+                <a href="/test/首次测试/#more">查看更多</a>
+            </p>
         
         </div>
         <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://galigeigei.org/首次测试/" data-id="cj59xzspf0000zgu85xj0lyo0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
             
-    
-        <a href="http://galigeigei.org/首次测试/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://galigeigei.org/首次测试/">评论</a>
-    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/test-java-cloud-呵呵-无敌-计算/">test java cloud 呵呵 无敌  计算</a>
+    </div>
 
+            <!-- partial('comment/counter', { post: post }) -->
         </footer>
     </div>
     
 </article>
+
 
 
 </section>
@@ -352,7 +274,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/首次测试/" class="thumbnail">
+                            <a href="/test/首次测试/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -363,7 +285,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/首次测试/" class="title">首次测试</a></p>
+                            <p class="item-title"><a href="/test/首次测试/" class="title">首次测试</a></p>
                             <p class="item-date"><time datetime="2017-07-18T15:42:23.000Z" itemprop="datePublished">2017-07-18</time></p>
                         </div>
                     </li>
@@ -417,11 +339,12 @@
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2017 fudongri<br>
-            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+            &copy; 2017 fudongri 版权所有<br>
+            
         </div>
     </div>
 </footer>
+
         
     
     <script>
