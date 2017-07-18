@@ -262,7 +262,7 @@
 
 </div>
 
-    <a data-url="http://galigeigei.org/首次测试/" data-id="cj59xuhlz00006su8dju4zaab" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://galigeigei.org/首次测试/" data-id="cj59xzspf0000zgu85xj0lyo0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -330,7 +330,7 @@
 
             
     
-        <a href="http://galigeigei.org/首次测试/#comments" id="sourceId::首次测试/" class="article-comment-link cy_cmt_count">评论</a>
+        <a href="http://galigeigei.org/首次测试/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://galigeigei.org/首次测试/">评论</a>
     
 
         </footer>
@@ -345,9 +345,11 @@
     
     
         <section id="comments">
-    <div id="SOHUCS" sid="首次测试/"></div>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 </section>
-	
+    
 
 </section>
             
@@ -435,14 +437,20 @@
 </footer>
         
     
-    <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt7sTr6t"></script>
-    <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
-    <script type="text/javascript">
-    window.changyan.api.config({
-    appid: 'cyt7sTr6t',
-    conf: 'd85477abd878894feb51bfc0a3aa9f3f'
-    });
-    </script>
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://galigeigei.org/首次测试/';
+        
+        this.page.identifier = '首次测试';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'icarus' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
 
 
