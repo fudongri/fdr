@@ -1764,6 +1764,8 @@ ol.toc {
 }
 .widget-title {
   margin-bottom: 0;
+  font-size: 1.3em;
+  font-weight: 800;
 }
 .widget {
   padding: 15px 5px;
