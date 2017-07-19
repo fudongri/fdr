@@ -682,14 +682,14 @@ code {
 }
 #profile .inner .base-info #follow {
   color: #fff;
-  width: 150px;
+  width: 90px;
   height: 40px;
   display: block;
   font-size: 14px;
   line-height: 40px;
   text-align: center;
   margin: 20px auto 10px;
-  background: #38b7ea;
+  background: #565a5f;
   border-radius: 20px;
   -webkit-transition: 0.2s ease;
   -moz-transition: 0.2s ease;
@@ -697,7 +697,7 @@ code {
   transition: 0.2s ease;
 }
 #profile .inner .base-info #follow:hover {
-  background: #49c8fb;
+  background: #38b7ea;
 }
 #profile .inner .article-info {
   padding: 0px;
