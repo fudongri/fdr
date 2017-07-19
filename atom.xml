@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>符东日 | blog</title>
+  <subtitle>我是一个疯子</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://wwww.galigeigei.org/"/>
+  <updated>2017-07-19T07:52:08.793Z</updated>
+  <id>http://wwww.galigeigei.org/</id>
+  
+  <author>
+    <name>fudongri</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>首次测试2</title>
+    <link href="http://wwww.galigeigei.org/%E9%A6%96%E6%AC%A1%E6%B5%8B%E8%AF%952/"/>
+    <id>http://wwww.galigeigei.org/首次测试2/</id>
+    <published>2017-07-18T15:42:23.000Z</published>
+    <updated>2017-07-19T07:52:08.793Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="测-试222"><a href="#测-试222" class="headerlink" title="测 试222"></a>测 试222</h2><h3 id="测-试222-1"><a href="#测-试222-1" class="headerlink" title="测 试222"></a>测 试222</h3><p><a href="https://www.baidu.com/" target="_blank" rel="external">baidu</a></p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    System.out.println(<span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="帅"><a href="#帅" class="headerlink" title="帅"></a>帅</h1><ul>
+<li>Red</li>
+</ul>
+<ul>
+<li>Green</li>
+</ul>
+<ul>
+<li>Blue</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;测-试222&quot;&gt;&lt;a href=&quot;#测-试222&quot; class=&quot;headerlink&quot; title=&quot;测 试222&quot;&gt;&lt;/a&gt;测 试222&lt;/h2&gt;&lt;h3 id=&quot;测-试222-1&quot;&gt;&lt;a href=&quot;#测-试222-1&quot; class=&quot;headerlink&quot; title=&quot;测 试222&quot;&gt;&lt;/a&gt;测 试222&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.baidu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;baidu&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="开发" scheme="http://wwww.galigeigei.org/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="标签1" scheme="http://wwww.galigeigei.org/tags/%E6%A0%87%E7%AD%BE1/"/>
+    
+      <category term="标签2" scheme="http://wwww.galigeigei.org/tags/%E6%A0%87%E7%AD%BE2/"/>
+    
+      <category term="标签3" scheme="http://wwww.galigeigei.org/tags/%E6%A0%87%E7%AD%BE3/"/>
+    
+      <category term="标签4" scheme="http://wwww.galigeigei.org/tags/%E6%A0%87%E7%AD%BE4/"/>
+    
+      <category term="xxx" scheme="http://wwww.galigeigei.org/tags/xxx/"/>
+    
+      <category term="aaa" scheme="http://wwww.galigeigei.org/tags/aaa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>首次测试</title>
+    <link href="http://wwww.galigeigei.org/%E9%A6%96%E6%AC%A1%E6%B5%8B%E8%AF%95/"/>
+    <id>http://wwww.galigeigei.org/首次测试/</id>
+    <published>2017-06-18T15:42:23.000Z</published>
+    <updated>2017-07-19T07:52:04.353Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="测-试"><a href="#测-试" class="headerlink" title="测 试"></a>测 试</h2><h3 id="测-试-1"><a href="#测-试-1" class="headerlink" title="测 试"></a>测 试</h3><p><a href="https://www.baidu.com/" target="_blank" rel="external">baidu</a></p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    System.out.println(<span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="帅"><a href="#帅" class="headerlink" title="帅"></a>帅</h1><ul>
+<li>Red</li>
+</ul>
+<ul>
+<li>Green</li>
+</ul>
+<ul>
+<li>Blue</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;测-试&quot;&gt;&lt;a href=&quot;#测-试&quot; class=&quot;headerlink&quot; title=&quot;测 试&quot;&gt;&lt;/a&gt;测 试&lt;/h2&gt;&lt;h3 id=&quot;测-试-1&quot;&gt;&lt;a href=&quot;#测-试-1&quot; class=&quot;headerlink&quot; title=&quot;测 试&quot;&gt;&lt;/a&gt;测 试&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.baidu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;baidu&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://wwww.galigeigei.org/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="标签1" scheme="http://wwww.galigeigei.org/tags/%E6%A0%87%E7%AD%BE1/"/>
+    
+      <category term="标签2" scheme="http://wwww.galigeigei.org/tags/%E6%A0%87%E7%AD%BE2/"/>
+    
+      <category term="标签3" scheme="http://wwww.galigeigei.org/tags/%E6%A0%87%E7%AD%BE3/"/>
+    
+      <category term="标签4" scheme="http://wwww.galigeigei.org/tags/%E6%A0%87%E7%AD%BE4/"/>
+    
+      <category term="xxx" scheme="http://wwww.galigeigei.org/tags/xxx/"/>
+    
+      <category term="aaa" scheme="http://wwww.galigeigei.org/tags/aaa/"/>
+    
+      <category term="ttt" scheme="http://wwww.galigeigei.org/tags/ttt/"/>
+    
+  </entry>
+  
+</feed>
