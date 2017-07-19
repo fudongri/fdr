@@ -668,18 +668,18 @@ code {
   text-align: center;
 }
 #profile .inner .base-info #name {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
 }
-#profile .inner .base-info #location {
+margin-bottom: 10px #location {
   font-size: 12px;
   margin-top: 5px;
   color: #9a9ea3;
 }
-#profile .inner .base-info #location .fa {
+margin-bottom: 10px #location .fa {
   margin-right: 5px;
 }
-#profile .inner .base-info #follow {
+margin-bottom: 10px #follow {
   color: #fff;
   width: 150px;
   height: 40px;
@@ -695,21 +695,21 @@ code {
   -ms-transition: 0.2s ease;
   transition: 0.2s ease;
 }
-#profile .inner .base-info #follow:hover {
+margin-bottom: 10px #follow:hover {
   background: #49c8fb;
 }
-#profile .inner .article-info {
+.article-info {
   padding: 0px;
 }
-#profile .inner .article-info:before,
-#profile .inner .article-info:after {
+.article-info:before,
+.article-info:after {
   content: "";
   display: table;
 }
-#profile .inner .article-info:after {
+.article-info:after {
   clear: both;
 }
-#profile .inner .article-info .article-info-block {
+.article-info .article-info-block {
   width: 50%;
   float: left;
   padding: 20px 15px;
@@ -719,22 +719,22 @@ code {
   box-sizing: border-box;
   font-size: 20px;
 }
-#profile .inner .article-info .article-info-block span {
+.article-info .article-info-block span {
   display: block;
   font-size: 14px;
   text-transform: uppercase;
 }
-#profile .inner .article-info .article-info-block:first-child {
+.article-info .article-info-block:first-child {
   border-right: 1px solid #eceff2;
 }
-#profile .inner .social-links > table {
+.social-links > table {
   width: 100%;
 }
-#profile .inner .social-links > table td {
+.social-links > table td {
   text-align: center;
   font-size: 24px;
 }
-#profile .inner .social-links > table td a {
+.social-links > table td a {
   position: relative;
   -webkit-transition: 0.2s ease;
   -moz-transition: 0.2s ease;
@@ -742,10 +742,10 @@ code {
   transition: 0.2s ease;
   color: #898d92;
 }
-#profile .inner .social-links > table td a:hover {
+.social-links > table td a:hover {
   color: #565a5f;
 }
-#profile .inner .social-links > table td a.tooltip:hover:after {
+.social-links > table td a.tooltip:hover:after {
   right: -50%;
   top: -41px;
   color: #fff;
@@ -762,7 +762,7 @@ code {
   box-shadow: 0 0 2px rgba(0,0,0,0.2);
   z-index: 1;
 }
-#profile .inner .social-links > table td a.tooltip:hover:before {
+.social-links > table td a.tooltip:hover:before {
   top: -12px;
   right: 8px;
   border: solid;
@@ -773,7 +773,7 @@ code {
   position: absolute;
   z-index: 2;
 }
-#profile.card {
+.card {
   top: 50px;
   right: 20px;
   z-index: 999;
@@ -781,13 +781,13 @@ code {
   min-width: 280px;
   position: absolute;
 }
-#profile.card .profile-inner {
+.card .profile-inner {
   position: relative;
   -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-#profile.card .profile-inner:before,
-#profile.card .profile-inner:after {
+.card .profile-inner:before,
+.card .profile-inner:after {
   z-index: 1;
   content: '';
   top: -20px;
@@ -797,7 +797,7 @@ code {
   border-style: solid;
   border-color: transparent transparent #fff transparent;
 }
-#profile.card .profile-inner:after {
+.card .profile-inner:after {
   z-index: 0;
   border-color: transparent transparent #dbdee1 transparent;
 }
@@ -1764,8 +1764,8 @@ ol.toc {
 }
 .widget-title {
   margin-bottom: 0;
-  font-size: 1.3em;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 600;
 }
 .widget {
   padding: 15px 5px;
