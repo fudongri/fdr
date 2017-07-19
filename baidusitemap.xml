@@ -4,61 +4,29 @@
 
     
   <url>
-    <loc>http://wwww.galigeigei.org/%E9%A6%96%E6%AC%A1%E6%B5%8B%E8%AF%952/</loc>
-    <lastmod>2017-07-19T07:52:08.793Z</lastmod>
+    <loc>http://wwww.galigeigei.org/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8%E9%A9%AC%E5%85%8B%E9%A3%9E%E8%B1%A1/</loc>
+    <lastmod>2017-07-19T17:03:54.627Z</lastmod>
     <data>
         <display>
-        <title>首次测试2</title>
+        <title>欢迎使用马克飞象</title>
         <pubTime>2017-07-18T15:42:23.000Z</pubTime>
         
-        <tag>标签1</tag>
+        <tag>马克飞象</tag>
          
-        <tag>标签2</tag>
+        <tag>测试一哈</tag>
          
-        <tag>标签3</tag>
+        <tag>JAVA</tag>
          
-        <tag>标签4</tag>
+        <tag>SCALA</tag>
          
-        <tag>xxx</tag>
+        <tag>GOLANG</tag>
          
-        <tag>aaa</tag>
-         
-         
-           
-             
-              <breadCrumb title="开发" url="http://wwww.galigeigei.org/categories/%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wwww.galigeigei.org/%E9%A6%96%E6%AC%A1%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2017-07-19T07:52:04.353Z</lastmod>
-    <data>
-        <display>
-        <title>首次测试</title>
-        <pubTime>2017-06-18T15:42:23.000Z</pubTime>
-        
-        <tag>标签1</tag>
-         
-        <tag>标签2</tag>
-         
-        <tag>标签3</tag>
-         
-        <tag>标签4</tag>
-         
-        <tag>xxx</tag>
-         
-        <tag>aaa</tag>
-         
-        <tag>ttt</tag>
+        <tag>PYTHON</tag>
          
          
            
              
-              <breadCrumb title="测试" url="http://wwww.galigeigei.org/categories/%E6%B5%8B%E8%AF%95/"/>
+              <breadCrumb title="测试一哈" url="http://wwww.galigeigei.org/categories/%E6%B5%8B%E8%AF%95%E4%B8%80%E5%93%88/"/>
           
         </display>
     </data>
