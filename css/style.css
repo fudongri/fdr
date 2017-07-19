@@ -820,7 +820,7 @@ code {
   margin-bottom: 14px;
 }
 .article-title {
-  font-size: 1.75em;
+  font-size: 1.6em;
   color: #565a5f;
   text-decoration: none;
   line-height: 1.3em;
@@ -1755,8 +1755,13 @@ ol.toc {
 .tagcloud a {
   margin-right: 5px;
 }
+.widget-wrap:nth-child(1) {
+  border: none;
+}
 .widget-wrap {
+  padding-top: 20px;
   margin: 40px 10px;
+  border-top: 1px dashed #ccc;
 }
 @media screen and (max-width: 559px) {
   .widget-wrap {
