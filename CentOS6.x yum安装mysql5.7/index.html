@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="独孤一条狗 | blog">
 <meta property="og:description" content="1.安装yum源 下载yum源的rpm包wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm  安装rpm包yum localinstall -y mysql57-community-release-el6-11.noarch.rpm">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-20T18:51:03.026Z">
+<meta property="og:updated_time" content="2017-07-20T18:56:28.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS6.x yum安装mysql5.7">
 <meta name="twitter:description" content="1.安装yum源 下载yum源的rpm包wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm  安装rpm包yum localinstall -y mysql57-community-release-el6-11.noarch.rpm">
@@ -237,7 +237,7 @@
 <li>修改root’@’localhost的登录密码<br><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;</code></li>
 </ul>
 <h4 id="3-开启远程连接"><a href="#3-开启远程连接" class="headerlink" title="3.开启远程连接"></a>3.开启远程连接</h4><ul>
-<li><p>开放3306端口，并重启iptables<br><code>vi /etc/sysconfig/iptables</code><br><code>service iptables restart</code></p>
+<li><p>开放3306端口，重启iptables<br><code>vi /etc/sysconfig/iptables</code><br><code>service iptables restart</code></p>
 </li>
 <li><p>本地连接mysql将mysql.user表中root用户的host值改为“%”<br><code>use mysql;</code><br><code>update user set host=&#39;%&#39; where user=&#39;root&#39;;</code><br><code>flush privileges;</code></p>
 <blockquote>

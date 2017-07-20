@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wwww.galigeigei.org/"/>
-  <updated>2017-07-20T18:51:03.026Z</updated>
+  <updated>2017-07-20T18:56:28.345Z</updated>
   <id>http://wwww.galigeigei.org/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wwww.galigeigei.org/CentOS6.x%20yum%E5%AE%89%E8%A3%85mysql5.7/"/>
     <id>http://wwww.galigeigei.org/CentOS6.x yum安装mysql5.7/</id>
     <published>2017-07-20T15:42:23.000Z</published>
-    <updated>2017-07-20T18:51:03.026Z</updated>
+    <updated>2017-07-20T18:56:28.345Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-安装yum源"><a href="#1-安装yum源" class="headerlink" title="1.安装yum源"></a>1.安装yum源</h4><ul>
 <li><p>下载yum源的rpm包<br><code>wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm</code></p>
@@ -37,7 +37,7 @@
 <li>修改root’@’localhost的登录密码<br><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;</code></li>
 </ul>
 <h4 id="3-开启远程连接"><a href="#3-开启远程连接" class="headerlink" title="3.开启远程连接"></a>3.开启远程连接</h4><ul>
-<li><p>开放3306端口，并重启iptables<br><code>vi /etc/sysconfig/iptables</code><br><code>service iptables restart</code></p>
+<li><p>开放3306端口，重启iptables<br><code>vi /etc/sysconfig/iptables</code><br><code>service iptables restart</code></p>
 </li>
 <li><p>本地连接mysql将mysql.user表中root用户的host值改为“%”<br><code>use mysql;</code><br><code>update user set host=&#39;%&#39; where user=&#39;root&#39;;</code><br><code>flush privileges;</code></p>
 <blockquote>
