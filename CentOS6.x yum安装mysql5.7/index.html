@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="独孤一条狗 | blog">
 <meta property="og:description" content="1.安装yum源 下载yum源的rpm包wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm  安装rpm包yum localinstall -y mysql57-community-release-el6-11.noarch.rpm">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-20T19:04:55.834Z">
+<meta property="og:updated_time" content="2017-07-20T19:10:17.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS6.x yum安装mysql5.7">
 <meta name="twitter:description" content="1.安装yum源 下载yum源的rpm包wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm  安装rpm包yum localinstall -y mysql57-community-release-el6-11.noarch.rpm">
@@ -241,7 +241,7 @@
 </li>
 <li><p>本地连接mysql将mysql.user表中root用户的host值改为“%”<br><code>use mysql;</code><br><code>update user set host=&#39;%&#39; where user=&#39;root&#39;;</code><br><code>flush privileges;</code></p>
 <blockquote>
-<p> <strong>说明：</strong>mysql.user表中host列指定了允许用户登录所使用的IP，百分号是通配符。<br> user=’root’&amp;host=’192.168.1.1’，表示root用户只能通过IP地址为<strong>192.168.1.1</strong>的客户端连接mysql。<br> user=’root’&amp;host=’192.168.1.%’，表示root用户可以通过IP地址以<strong>192.168.1.</strong>开头的客户端连接mysql。<br> user=’root’&amp;host=’%’，表示所有IP都有连接权限。因此在开启远程连接时，大家为了省事就会把host设置为“%”。</p>
+<p> <strong>说明：</strong>mysql.user表中host列指定了允许用户登录所使用的IP，<strong>%</strong>是通配符。<br> user=’root’&amp;host=’192.168.1.1’，表示root用户只能通过IP地址为<strong>192.168.1.1</strong>的客户端连接mysql。<br> user=’root’&amp;host=’192.168.1.%’，表示root用户可以通过IP地址以<strong>192.168.1.</strong>开头的客户端连接mysql。<br> user=’root’&amp;host=’%’，表示所有IP都有连接权限。因此在开启远程连接时，为了省事可以把host更新为<strong>%</strong>。</p>
 </blockquote>
 </li>
 </ul>
