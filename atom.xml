@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wwww.galigeigei.org/"/>
-  <updated>2017-07-20T18:29:56.629Z</updated>
+  <updated>2017-07-20T18:39:10.554Z</updated>
   <id>http://wwww.galigeigei.org/</id>
   
   <author>
@@ -16,16 +16,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://wwww.galigeigei.org/1/"/>
-    <id>http://wwww.galigeigei.org/1/</id>
-    <published>2017-07-20T18:29:56.629Z</published>
-    <updated>2017-07-20T18:29:56.629Z</updated>
+    <title>CentOS6.x yum安装mysql5.7</title>
+    <link href="http://wwww.galigeigei.org/CentOS6.x%20yum%E5%AE%89%E8%A3%85mysql5.7/"/>
+    <id>http://wwww.galigeigei.org/CentOS6.x yum安装mysql5.7/</id>
+    <published>2017-07-20T15:42:23.000Z</published>
+    <updated>2017-07-20T18:39:10.554Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-安装yum源"><a href="#1-安装yum源" class="headerlink" title="1.安装yum源"></a>1.安装yum源</h4><ul>
+<li><p>下载yum源的rpm包<br><code>wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-9.noarch.rpm</code></p>
+</li>
+<li><p>安装rpm包<br><code>yum localinstall -y mysql57-community-release-el6-9.noarch.rpm</code></p>
+</li>
+</ul>
+<a id="more"></a>
+<h4 id="2-安装mysql"><a href="#2-安装mysql" class="headerlink" title="2.安装mysql"></a>2.安装mysql</h4><ul>
+<li>安装mysql<br><code>yum install -y mysql-community-server</code></li>
+<li>开启mysql服务<br><code>service mysqld start</code></li>
+<li>查看mysql生成的临时登录密码<br><code>grep &#39;temporary password&#39; /var/log/mysqld.log</code></li>
+<li>使用临时密码登录<br><code>mysql -uroot -p</code></li>
+<li>修改root’@’localhost的登录密码<br><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;</code></li>
+</ul>
+<h4 id="3-开启远程连接"><a href="#3-开启远程连接" class="headerlink" title="3.开启远程连接"></a>3.开启远程连接</h4><ul>
+<li><p>开放3306端口，并重启iptables<br><code>vi /etc/sysconfig/iptables</code><br><code>service iptables restart</code></p>
+</li>
+<li><p>本地连接mysql将mysql.user表中root用户的host值改为“%”<br><code>use mysql;</code><br><code>update user set host=&#39;%&#39; where user=&#39;root&#39;;</code><br><code>flush privileges;</code></p>
+<blockquote>
+<p> <strong>说明：</strong>mysql.user表中host列指定了允许用户登录所使用的IP，百分号是通配符。<br> user=’root’&amp;host=’192.168.1.1’，表示root用户只能通过192.168.1.1的客户端连接mysql。<br> user=’root’&amp;host=’192.168.1.%’，表示root用户可以通过IP地址前缀为“192.168.1.”的客户端连接mysql。<br> user=’root’&amp;host=’%’，表示所有IP都有连接权限。因此在开启远程连接时，大家为了省事就会把host设置为“%”。</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
     
     <summary type="html">
     
+      &lt;h4 id=&quot;1-安装yum源&quot;&gt;&lt;a href=&quot;#1-安装yum源&quot; class=&quot;headerlink&quot; title=&quot;1.安装yum源&quot;&gt;&lt;/a&gt;1.安装yum源&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;下载yum源的rpm包&lt;br&gt;&lt;code&gt;wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-9.noarch.rpm&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装rpm包&lt;br&gt;&lt;code&gt;yum localinstall -y mysql57-community-release-el6-9.noarch.rpm&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
     </summary>
     
+      <category term="mysql" scheme="http://wwww.galigeigei.org/categories/mysql/"/>
+    
+    
+      <category term="CentOS" scheme="http://wwww.galigeigei.org/tags/CentOS/"/>
+    
+      <category term="Mysql" scheme="http://wwww.galigeigei.org/tags/Mysql/"/>
     
   </entry>
   

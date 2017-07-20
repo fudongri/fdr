@@ -3,18 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档 | 独孤一条狗 | blog</title>
+    <title>CentOS6.x yum安装mysql5.7 | 独孤一条狗 | blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="独孤一条狗 | blog">
-<meta property="og:url" content="http://wwww.galigeigei.org/archives/index.html">
+    <meta name="description" content="1.安装yum源 下载yum源的rpm包wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-9.noarch.rpm  安装rpm包yum localinstall -y mysql57-community-release-el6-9.noarch.rpm">
+<meta name="keywords" content="CentOS,Mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS6.x yum安装mysql5.7">
+<meta property="og:url" content="http://wwww.galigeigei.org/CentOS6.x yum安装mysql5.7/index.html">
 <meta property="og:site_name" content="独孤一条狗 | blog">
-<meta property="og:description" content="java">
+<meta property="og:description" content="1.安装yum源 下载yum源的rpm包wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-9.noarch.rpm  安装rpm包yum localinstall -y mysql57-community-release-el6-9.noarch.rpm">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-07-20T18:39:10.554Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="独孤一条狗 | blog">
-<meta name="twitter:description" content="java">
+<meta name="twitter:title" content="CentOS6.x yum安装mysql5.7">
+<meta name="twitter:description" content="1.安装yum源 下载yum源的rpm包wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-9.noarch.rpm  安装rpm包yum localinstall -y mysql57-community-release-el6-9.noarch.rpm">
     
 
     
@@ -183,25 +185,21 @@
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2017</h1>
-            </div>
+            <section id="main"><article id="post-CentOS6.x yum安装mysql5.7" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/CentOS6.x yum安装mysql5.7/">CentOS6.x yum安装mysql5.7</a>
+        <h1 class="article-title" itemprop="name">
+            CentOS6.x yum安装mysql5.7
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/CentOS6.x yum安装mysql5.7/">
@@ -210,23 +208,65 @@
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/mysql/">mysql</a>
     </div>
 
-                    
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h4 id="1-安装yum源"><a href="#1-安装yum源" class="headerlink" title="1.安装yum源"></a>1.安装yum源</h4><ul>
+<li><p>下载yum源的rpm包<br><code>wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-9.noarch.rpm</code></p>
+</li>
+<li><p>安装rpm包<br><code>yum localinstall -y mysql57-community-release-el6-9.noarch.rpm</code></p>
+</li>
+</ul>
+<a id="more"></a>
+<h4 id="2-安装mysql"><a href="#2-安装mysql" class="headerlink" title="2.安装mysql"></a>2.安装mysql</h4><ul>
+<li>安装mysql<br><code>yum install -y mysql-community-server</code></li>
+<li>开启mysql服务<br><code>service mysqld start</code></li>
+<li>查看mysql生成的临时登录密码<br><code>grep &#39;temporary password&#39; /var/log/mysqld.log</code></li>
+<li>使用临时密码登录<br><code>mysql -uroot -p</code></li>
+<li>修改root’@’localhost的登录密码<br><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;</code></li>
+</ul>
+<h4 id="3-开启远程连接"><a href="#3-开启远程连接" class="headerlink" title="3.开启远程连接"></a>3.开启远程连接</h4><ul>
+<li><p>开放3306端口，并重启iptables<br><code>vi /etc/sysconfig/iptables</code><br><code>service iptables restart</code></p>
+</li>
+<li><p>本地连接mysql将mysql.user表中root用户的host值改为“%”<br><code>use mysql;</code><br><code>update user set host=&#39;%&#39; where user=&#39;root&#39;;</code><br><code>flush privileges;</code></p>
+<blockquote>
+<p> <strong>说明：</strong>mysql.user表中host列指定了允许用户登录所使用的IP，百分号是通配符。<br> user=’root’&amp;host=’192.168.1.1’，表示root用户只能通过192.168.1.1的客户端连接mysql。<br> user=’root’&amp;host=’192.168.1.%’，表示root用户可以通过IP地址前缀为“192.168.1.”的客户端连接mysql。<br> user=’root’&amp;host=’%’，表示所有IP都有连接权限。因此在开启远程连接时，大家为了省事就会把host设置为“%”。</p>
+</blockquote>
+</li>
+</ul>
+
+        
+        </div>
+        <footer class="article-footer">
+            
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/CentOS/">CentOS</a>, <a class="tag-link" href="/tags/Mysql/">Mysql</a>
     </div>
 
-                </div>
-            </div>
-        </div>
+            <!-- partial('comment/counter', { post: post }) -->
+        </footer>
+    </div>
     
-</div>
+        
+
+    
+</article>
+
+
+    
+
 </section>
             
                 
@@ -279,7 +319,9 @@
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = 'undefined';
+            this.page.url = 'http://wwww.galigeigei.org/CentOS6.x yum安装mysql5.7/';
+        
+        this.page.identifier = 'CentOS6.x yum安装mysql5.7';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

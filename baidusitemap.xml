@@ -4,15 +4,22 @@
 
     
   <url>
-    <loc>http://wwww.galigeigei.org/1/</loc>
-    <lastmod>2017-07-20T18:29:56.629Z</lastmod>
+    <loc>http://wwww.galigeigei.org/CentOS6.x%20yum%E5%AE%89%E8%A3%85mysql5.7/</loc>
+    <lastmod>2017-07-20T18:39:10.554Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2017-07-20T18:29:56.629Z</pubTime>
+        <title>CentOS6.x yum安装mysql5.7</title>
+        <pubTime>2017-07-20T15:42:23.000Z</pubTime>
         
+        <tag>CentOS</tag>
+         
+        <tag>Mysql</tag>
+         
          
            
+             
+              <breadCrumb title="mysql" url="http://wwww.galigeigei.org/categories/mysql/"/>
+          
         </display>
     </data>
     </url>
