@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wwww.galigeigei.org/"/>
-  <updated>2017-07-20T19:10:17.695Z</updated>
+  <updated>2017-07-21T17:19:22.188Z</updated>
   <id>http://wwww.galigeigei.org/</id>
   
   <author>
@@ -14,6 +14,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS6.x  mysql5.7主从同步配置</title>
+    <link href="http://wwww.galigeigei.org/CentOS6.x%20%20mysql5.7%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5%E9%85%8D%E7%BD%AE/"/>
+    <id>http://wwww.galigeigei.org/CentOS6.x  mysql5.7主从同步配置/</id>
+    <published>2017-07-21T15:42:23.000Z</published>
+    <updated>2017-07-21T17:19:22.188Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h4><ul>
+<li>一台Master服务器 192.168.1.101</li>
+<li>一台Slave服务器　192.168.1.102</li>
+</ul>
+<a id="more"></a>
+<h4 id="2-配置Master"><a href="#2-配置Master" class="headerlink" title="2.配置Master"></a>2.配置Master</h4><ul>
+<li><p>开启二进制日志，配置server_id<br><code>vim /etc/my.cnf</code><br>在[mysqld]下增加如下配置，并<strong>重启myql</strong>服务，重启完成之后，我们可以通过<code>show variables like &#39;%log_bin%&#39;;</code>查看二进制日志的ON/OFF状态</p>
+<figure class="highlight profile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">log-bin=mysqlbin-log</div><div class="line">server_id=<span class="number">101</span> #server_id唯一即可，一般取ip尾号</div></pre></td></tr></table></figure>
+</li>
+<li><p>连接mysql，创建slave用户，授予replication slave权限即可<br><code>grant replication slave on *.* to &#39;relica&#39;@&#39;192.168.1.%&#39; identified by &#39;123456&#39;;</code></p>
+</li>
+<li>查看master状态<br><code>show master status\G;</code><br>我这里得到：<br>File: <strong>mysql-bin.000002</strong><br>Position: <strong>154</strong><br>Binlog_Do_DB:<br>Binlog_Ignore_DB:<br>Executed_Gtid_Set: </li>
+</ul>
+<h4 id="3-配置Slave"><a href="#3-配置Slave" class="headerlink" title="3.配置Slave"></a>3.配置Slave</h4><ul>
+<li><p>配置server_id<br><code>vim /etc/my.cnf</code><br>在[mysqld]下增加如下配置，并<strong>重启myql</strong>服务</p>
+<figure class="highlight profile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#如果slave下面还有slave，这里也可以设置log-bin</div><div class="line">server_id=<span class="number">102</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>连接mysql，设置slave参数，并start slave<br><code>change master to master_host=&#39;192.168.1.101&#39;,master_user=&#39;relica&#39;,master_password=&#39;123456&#39;,master_log_file=&#39;mysql-bin.000002&#39;, master_log_pos=154;</code><br><code>start slave;</code></p>
+</li>
+<li><p>查看Slave状态<br><code>show slave status \G;</code><br>如果看到<strong>Slave_IO_Running: Yes</strong>以及<strong>Slave_SQL_Running: Yes</strong>说明slave已经开始跑了。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意事项：</p>
+<ul>
+<li>如果需要重新修改slave的参数，需要先执行<code>stop slave;</code></li>
+<li>因为我是通过克隆虚拟机跑的mysql，Slave_IO_Running一直为NO,通过<code>show slave status</code>分析得知是因为两台机器mysql安装目录下auto.cnf中的server-uuid相同导致，因此只需要在其中一台服务器的mysql安装目录执行<code>mv auto.cnf auto.cnf.bak</code>再重启mysql即可，它会自动生成新的uuid。</li>
+<li>也正是因为我的mysql是本地通过虚拟机克隆产生的，所以不需要考虑将Master的数据和Slave的数据保持一致的问题，而这一步在实际环境中很重要。</li>
+</ul>
+</blockquote>
+<h4 id="4-测试"><a href="#4-测试" class="headerlink" title="4.测试"></a>4.测试</h4><p>比如，在<strong>Mater</strong>中执行<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">test</span>;</div><div class="line"><span class="keyword">use</span> <span class="keyword">test</span>;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`user`</span> (</div><div class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</div><div class="line">  <span class="string">`name`</span> <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`age`</span> tinyint(<span class="number">3</span>) <span class="keyword">unsigned</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</div><div class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">user</span>(<span class="keyword">name</span>,age) <span class="keyword">VALUES</span>(<span class="string">'a'</span>,<span class="number">20</span>);</div></pre></td></tr></table></figure></p>
+<p>可以发现，Slave中数据已经进行了同步。</p>
+<h4 id="附：使用Spring-boot访问主从数据库，实现读写分离"><a href="#附：使用Spring-boot访问主从数据库，实现读写分离" class="headerlink" title="附：使用Spring boot访问主从数据库，实现读写分离"></a>附：使用Spring boot访问主从数据库，实现读写分离</h4><p>待续。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;1-环境准备&quot;&gt;&lt;a href=&quot;#1-环境准备&quot; class=&quot;headerlink&quot; title=&quot;1.环境准备&quot;&gt;&lt;/a&gt;1.环境准备&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;一台Master服务器 192.168.1.101&lt;/li&gt;
+&lt;li&gt;一台Slave服务器　192.168.1.102&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://wwww.galigeigei.org/categories/mysql/"/>
+    
+    
+      <category term="CentOS" scheme="http://wwww.galigeigei.org/tags/CentOS/"/>
+    
+      <category term="Mysql" scheme="http://wwww.galigeigei.org/tags/Mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS6.x yum安装mysql5.7</title>
