@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wwww.galigeigei.org/"/>
-  <updated>2017-07-21T17:53:54.299Z</updated>
+  <updated>2017-07-21T17:55:31.516Z</updated>
   <id>http://wwww.galigeigei.org/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://wwww.galigeigei.org/CentOS6.x%20%20mysql5.7%E5%AE%9E%E7%8E%B0%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5/"/>
     <id>http://wwww.galigeigei.org/CentOS6.x  mysql5.7实现主从同步/</id>
     <published>2017-07-21T15:42:23.000Z</published>
-    <updated>2017-07-21T17:53:54.299Z</updated>
+    <updated>2017-07-21T17:55:31.516Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h4><ul>
 <li>一台Master服务器 192.168.1.101</li>
-<li>一台Slave服务器　192.168.1.102<br>多个从节点同理。。<br><a href="https://dev.mysql.com/doc/refman/5.7/en/replication-configuration.html" target="_blank" rel="external">Mysql官方文档</a></li>
+<li>一台Slave服务器（多个从节点同理）　192.168.1.102<br><a href="https://dev.mysql.com/doc/refman/5.7/en/replication-configuration.html" target="_blank" rel="external">Mysql官方文档</a></li>
 </ul>
 <a id="more"></a>
 <h4 id="2-配置Master"><a href="#2-配置Master" class="headerlink" title="2.配置Master"></a>2.配置Master</h4><ul>
@@ -61,7 +61,7 @@
     
       &lt;h4 id=&quot;1-环境准备&quot;&gt;&lt;a href=&quot;#1-环境准备&quot; class=&quot;headerlink&quot; title=&quot;1.环境准备&quot;&gt;&lt;/a&gt;1.环境准备&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;一台Master服务器 192.168.1.101&lt;/li&gt;
-&lt;li&gt;一台Slave服务器　192.168.1.102&lt;br&gt;多个从节点同理。。&lt;br&gt;&lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/replication-configuration.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mysql官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;一台Slave服务器（多个从节点同理）　192.168.1.102&lt;br&gt;&lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/replication-configuration.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mysql官方文档&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
