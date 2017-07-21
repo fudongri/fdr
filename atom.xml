@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wwww.galigeigei.org/"/>
-  <updated>2017-07-21T17:55:31.516Z</updated>
+  <updated>2017-07-21T19:29:38.432Z</updated>
   <id>http://wwww.galigeigei.org/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wwww.galigeigei.org/CentOS6.x%20%20mysql5.7%E5%AE%9E%E7%8E%B0%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5/"/>
     <id>http://wwww.galigeigei.org/CentOS6.x  mysql5.7实现主从同步/</id>
     <published>2017-07-21T15:42:23.000Z</published>
-    <updated>2017-07-21T17:55:31.516Z</updated>
+    <updated>2017-07-21T19:29:38.432Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h4><ul>
 <li>一台Master服务器 192.168.1.101</li>
@@ -33,7 +33,7 @@
 </li>
 <li><p>连接mysql，创建slave用户，授予replication slave权限即可<br><code>grant replication slave on *.* to &#39;relica&#39;@&#39;192.168.1.%&#39; identified by &#39;123456&#39;;</code></p>
 </li>
-<li>查看master状态<br><code>show master status\G;</code><br>我这里得到：<br>File: <strong>mysql-bin.000002</strong><br>Position: <strong>154</strong><br>Binlog_Do_DB:<br>Binlog_Ignore_DB:<br>Executed_Gtid_Set: </li>
+<li>查看当前正在使用的二进制日志<br><code>show master status\G;</code><br>我这里得到：<br>File: <strong>mysql-bin.000002</strong><br>Position: <strong>154</strong><br>Binlog_Do_DB:<br>Binlog_Ignore_DB:<br>Executed_Gtid_Set: </li>
 </ul>
 <h4 id="3-配置Slave"><a href="#3-配置Slave" class="headerlink" title="3.配置Slave"></a>3.配置Slave</h4><ul>
 <li><p>配置server_id<br><code>vim /etc/my.cnf</code><br>在[mysqld]下增加如下配置，并<strong>重启myql</strong>服务</p>
