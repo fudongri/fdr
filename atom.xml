@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wwww.galigeigei.org/"/>
-  <updated>2017-08-02T15:04:17.906Z</updated>
+  <updated>2017-08-02T15:13:19.130Z</updated>
   <id>http://wwww.galigeigei.org/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wwww.galigeigei.org/jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5tomcat/"/>
     <id>http://wwww.galigeigei.org/jvisualvm远程连接tomcat/</id>
     <published>2017-08-02T14:05:15.000Z</published>
-    <updated>2017-08-02T15:04:17.906Z</updated>
+    <updated>2017-08-02T15:13:19.130Z</updated>
     
     <content type="html"><![CDATA[<h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4><ul>
 <li>在tomcat的catalina.sh文件中加入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.1.101&quot;</div></pre></td></tr></table></figure>
@@ -31,7 +31,7 @@
 <p> <strong>说明：</strong><br>-Dcom.sun.management.jmxremote.port 远程连接端口<br>-Dcom.sun.management.jmxremote.ssl=false  是否启用ssl<br>-Dcom.sun.management.jmxremote.authenticate=false   是否需要用户名密码认证<br>-Djava.rmi.server.hostname  服务器的ip</p>
 </blockquote>
 <ul>
-<li>开放端口<br>这里有个坑，不仅需要开放配置的远程的连接的端口，JMXserver还会监听几个随机端口。。不废话，看操作<br><code>netstat -tupln | grep 7070</code><br>tcp        0      0 :::7070                     :::<em>                        LISTEN      3110/java<br><code>lsof -i| grep 3110</code><br>java      3110    root   19u  IPv6  37695      0t0  TCP </em>:60865 (LISTEN)<br>java      3110    root   20u  IPv6  37696      0t0  TCP <em>:arcp (LISTEN)<br>java      3110    root   22u  IPv6  37703      0t0  TCP </em>:57146 (LISTEN)<br>java      3110    root   52u  IPv6  37704      0t0  TCP <em>:webcache (LISTEN)<br>java      3110    root   56u  IPv6  37706      0t0  TCP </em>:8009 (LISTEN)<br>java      3110    root   78u  IPv6  37717      0t0  TCP localhost:mxi (LISTEN)</li>
+<li>开放端口<br>这里有个坑，不仅需要开放配置的远程的连接的端口，JMXserver还会监听几个随机端口。。不废话，看操作<br><code>netstat -tupln | grep 7070</code><br>tcp        0      0 :::7070                     :::<em>                        LISTEN      <strong>3110</strong>/java<br><code>lsof -i| grep 3110</code><br>java      3110    root   19u  IPv6  37695      0t0  TCP </em>:<strong>60865</strong> (LISTEN)<br>java      3110    root   20u  IPv6  37696      0t0  TCP <em>:arcp (LISTEN)<br>java      3110    root   22u  IPv6  37703      0t0  TCP </em>:<strong>57146</strong> (LISTEN)<br>java      3110    root   52u  IPv6  37704      0t0  TCP <em>:webcache (LISTEN)<br>java      3110    root   56u  IPv6  37706      0t0  TCP </em>:<strong>8009</strong> (LISTEN)<br>java      3110    root   78u  IPv6  37717      0t0  TCP localhost:mxi (LISTEN)</li>
 </ul>
 <blockquote>
 <p>我们需要把这些端口在防火墙中全部开放，然而每次重启tomcat这些端口又全变了，然后你懂的。。当然你可以选择直接关闭防火墙，后果自负。。</p>
