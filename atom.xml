@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wwww.galigeigei.org/"/>
-  <updated>2017-08-02T15:02:07.334Z</updated>
+  <updated>2017-08-02T15:04:17.906Z</updated>
   <id>http://wwww.galigeigei.org/</id>
   
   <author>
@@ -16,19 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>jvisualvm远程连接tomcat</title>
     <link href="http://wwww.galigeigei.org/jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5tomcat/"/>
     <id>http://wwww.galigeigei.org/jvisualvm远程连接tomcat/</id>
-    <published>2017-08-02T15:02:07.334Z</published>
-    <updated>2017-08-02T15:02:07.334Z</updated>
+    <published>2017-08-02T14:05:15.000Z</published>
+    <updated>2017-08-02T15:04:17.906Z</updated>
     
-    <content type="html"><![CDATA[<p>title: jvisualvm远程连接tomcat<br>date: 2017-08-02 22:05:15<br>comments: false<br>categories: </p>
-<ul>
-<li>JVM<br>tags: </li>
-<li>jvisualVM</li>
-<li>tomcat</li>
-</ul>
-<h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4><ul>
+    <content type="html"><![CDATA[<h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4><ul>
 <li>在tomcat的catalina.sh文件中加入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.1.101&quot;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -50,19 +44,19 @@
     
     <summary type="html">
     
-      &lt;p&gt;title: jvisualvm远程连接tomcat&lt;br&gt;date: 2017-08-02 22:05:15&lt;br&gt;comments: false&lt;br&gt;categories: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JVM&lt;br&gt;tags: &lt;/li&gt;
-&lt;li&gt;jvisualVM&lt;/li&gt;
-&lt;li&gt;tomcat&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;方法1：JMX连接&quot;&gt;&lt;a href=&quot;#方法1：JMX连接&quot; class=&quot;headerlink&quot; title=&quot;方法1：JMX连接&quot;&gt;&lt;/a&gt;方法1：JMX连接&lt;/h4&gt;&lt;ul&gt;
+      &lt;h4 id=&quot;方法1：JMX连接&quot;&gt;&lt;a href=&quot;#方法1：JMX连接&quot; class=&quot;headerlink&quot; title=&quot;方法1：JMX连接&quot;&gt;&lt;/a&gt;方法1：JMX连接&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;在tomcat的catalina.sh文件中加入&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;JAVA_OPTS=&amp;quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.1.101&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
     
+      <category term="JVM" scheme="http://wwww.galigeigei.org/categories/JVM/"/>
+    
+    
+      <category term="jvisualVM" scheme="http://wwww.galigeigei.org/tags/jvisualVM/"/>
+    
+      <category term="tomcat" scheme="http://wwww.galigeigei.org/tags/tomcat/"/>
     
   </entry>
   

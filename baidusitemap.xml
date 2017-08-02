@@ -5,14 +5,21 @@
     
   <url>
     <loc>http://wwww.galigeigei.org/jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5tomcat/</loc>
-    <lastmod>2017-08-02T15:02:07.334Z</lastmod>
+    <lastmod>2017-08-02T15:04:17.906Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2017-08-02T15:02:07.334Z</pubTime>
+        <title>jvisualvm远程连接tomcat</title>
+        <pubTime>2017-08-02T14:05:15.000Z</pubTime>
         
+        <tag>jvisualVM</tag>
+         
+        <tag>tomcat</tag>
+         
          
            
+             
+              <breadCrumb title="JVM" url="http://wwww.galigeigei.org/categories/JVM/"/>
+          
         </display>
     </data>
     </url>
