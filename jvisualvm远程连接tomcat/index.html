@@ -5,18 +5,18 @@
     
     <title>jvisualvm远程连接tomcat | 独孤一条狗 | blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="方法1：JMX连接 在tomcat的catalina.sh文件中加入1JAVA_OPTS=&amp;quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server">
+    <meta name="description" content="方法1：JMX连接 在tomcat的catalina.sh文件中加入12JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hos">
 <meta name="keywords" content="jvisualVM,tomcat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jvisualvm远程连接tomcat">
 <meta property="og:url" content="http://wwww.galigeigei.org/jvisualvm远程连接tomcat/index.html">
 <meta property="og:site_name" content="独孤一条狗 | blog">
-<meta property="og:description" content="方法1：JMX连接 在tomcat的catalina.sh文件中加入1JAVA_OPTS=&amp;quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server">
+<meta property="og:description" content="方法1：JMX连接 在tomcat的catalina.sh文件中加入12JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hos">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-02T15:13:19.130Z">
+<meta property="og:updated_time" content="2017-08-02T15:57:59.995Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jvisualvm远程连接tomcat">
-<meta name="twitter:description" content="方法1：JMX连接 在tomcat的catalina.sh文件中加入1JAVA_OPTS=&amp;quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server">
+<meta name="twitter:description" content="方法1：JMX连接 在tomcat的catalina.sh文件中加入12JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hos">
     
 
     
@@ -223,7 +223,7 @@
         
             
             <h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4><ul>
-<li>在tomcat的catalina.sh文件中加入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.1.101&quot;</div></pre></td></tr></table></figure>
+<li>在tomcat的catalina.sh文件中加入<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS="-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false</div><div class="line"> -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.1.101"</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <a id="more"></a>
