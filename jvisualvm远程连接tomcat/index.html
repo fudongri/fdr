@@ -3,18 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>标签: Mysql | 独孤一条狗 | blog</title>
+    <title>独孤一条狗 | blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="java">
-<meta property="og:type" content="website">
+    <meta name="description" content="title: jvisualvm远程连接tomcatdate: 2017-08-02 22:05:15comments: falsecategories:   JVMtags:  jvisualVM tomcat  方法1：JMX连接 在tomcat的catalina.sh文件中加入1JAVA_OPTS=&amp;quot;-Dcom.sun.management.jmxremote.port=7070">
+<meta property="og:type" content="article">
 <meta property="og:title" content="独孤一条狗 | blog">
-<meta property="og:url" content="http://wwww.galigeigei.org/tags/Mysql/index.html">
+<meta property="og:url" content="http://wwww.galigeigei.org/jvisualvm远程连接tomcat/index.html">
 <meta property="og:site_name" content="独孤一条狗 | blog">
-<meta property="og:description" content="java">
+<meta property="og:description" content="title: jvisualvm远程连接tomcatdate: 2017-08-02 22:05:15comments: falsecategories:   JVMtags:  jvisualVM tomcat  方法1：JMX连接 在tomcat的catalina.sh文件中加入1JAVA_OPTS=&amp;quot;-Dcom.sun.management.jmxremote.port=7070">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-02T15:02:07.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="独孤一条狗 | blog">
-<meta name="twitter:description" content="java">
+<meta name="twitter:description" content="title: jvisualvm远程连接tomcatdate: 2017-08-02 22:05:15comments: falsecategories:   JVMtags:  jvisualVM tomcat  方法1：JMX连接 在tomcat的catalina.sh文件中加入1JAVA_OPTS=&amp;quot;-Dcom.sun.management.jmxremote.port=7070">
     
 
     
@@ -183,86 +184,73 @@
 </aside>
 
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-tag"></i></span>
-        <h1 class="title">#Mysql</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/CentOS6.x  mysql5.7实现主从同步/">CentOS6.x  mysql5.7实现主从同步</a>
-        </h1>
-    
+            <section id="main"><article id="post-jvisualvm远程连接tomcat" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>title: jvisualvm远程连接tomcat<br>date: 2017-08-02 22:05:15<br>comments: false<br>categories: </p>
+<ul>
+<li>JVM<br>tags: </li>
+<li>jvisualVM</li>
+<li>tomcat</li>
+</ul>
+<h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4><ul>
+<li>在tomcat的catalina.sh文件中加入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.1.101&quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<blockquote>
+<p> <strong>说明：</strong><br>-Dcom.sun.management.jmxremote.port 远程连接端口<br>-Dcom.sun.management.jmxremote.ssl=false  是否启用ssl<br>-Dcom.sun.management.jmxremote.authenticate=false   是否需要用户名密码认证<br>-Djava.rmi.server.hostname  服务器的ip</p>
+</blockquote>
+<ul>
+<li>开放端口<br>这里有个坑，不仅需要开放配置的远程的连接的端口，JMXserver还会监听几个随机端口。。不废话，看操作<br><code>netstat -tupln | grep 7070</code><br>tcp        0      0 :::7070                     :::<em>                        LISTEN      3110/java<br><code>lsof -i| grep 3110</code><br>java      3110    root   19u  IPv6  37695      0t0  TCP </em>:60865 (LISTEN)<br>java      3110    root   20u  IPv6  37696      0t0  TCP <em>:arcp (LISTEN)<br>java      3110    root   22u  IPv6  37703      0t0  TCP </em>:57146 (LISTEN)<br>java      3110    root   52u  IPv6  37704      0t0  TCP <em>:webcache (LISTEN)<br>java      3110    root   56u  IPv6  37706      0t0  TCP </em>:8009 (LISTEN)<br>java      3110    root   78u  IPv6  37717      0t0  TCP localhost:mxi (LISTEN)</li>
+</ul>
+<blockquote>
+<p>我们需要把这些端口在防火墙中全部开放，然而每次重启tomcat这些端口又全变了，然后你懂的。。当然你可以选择直接关闭防火墙，后果自负。。</p>
+</blockquote>
+<ul>
+<li>客户端连接<br>最后就可以在我们本地JAVA HOME的bin目录打开jvisualvm.exe选择<code>文件--&gt;添加JMX连接</code>，输入ip端口连接就行了</li>
+</ul>
+<h4 id="方法2：jstatd连接"><a href="#方法2：jstatd连接" class="headerlink" title="方法2：jstatd连接"></a>方法2：jstatd连接</h4><p>先睡觉。。。</p>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/CentOS6.x  mysql5.7实现主从同步/">
-            <time datetime="2017-07-21T15:42:23.000Z" itemprop="datePublished">2017-07-21</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/mysql/">mysql</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/CentOS/">CentOS</a>, <a class="tag-link" href="/tags/Mysql/">Mysql</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
+        <footer class="article-footer">
+            
+            <!-- partial('comment/counter', { post: post }) -->
+        </footer>
+    </div>
     
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
+        
+<nav id="article-nav">
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/CentOS6.x yum安装mysql5.7/">CentOS6.x yum安装mysql5.7</a>
-        </h1>
     
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/CentOS6.x yum安装mysql5.7/">
-            <time datetime="2017-07-20T15:42:23.000Z" itemprop="datePublished">2017-07-20</time>
+        <a href="/CentOS6.x  mysql5.7实现主从同步/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">CentOS6.x  mysql5.7实现主从同步</div>
         </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/mysql/">mysql</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/CentOS/">CentOS</a>, <a class="tag-link" href="/tags/Mysql/">Mysql</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
     
-</div>
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
+
 </section>
             
                 
@@ -315,11 +303,13 @@
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = 'undefined';
+            this.page.url = 'http://wwww.galigeigei.org/jvisualvm远程连接tomcat/';
+        
+        this.page.identifier = 'jvisualvm远程连接tomcat';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'icarus' + '.disqus.com/count.js';
+        s.src = '//' + 'icarus' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
