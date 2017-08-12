@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://wwww.galigeigei.org/jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5tomcat/</loc>
+    <loc>http://wwww.galigeigei.org/CentOS6.x%20%20mysql5.7%E5%AE%9E%E7%8E%B0%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5/</loc>
     
-    <lastmod>2017-08-02T16:08:46.586Z</lastmod>
+    <lastmod>2017-08-12T08:45:03.290Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wwww.galigeigei.org/CentOS6.x%20%20mysql5.7%E5%AE%9E%E7%8E%B0%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5/</loc>
+    <loc>http://wwww.galigeigei.org/CentOS6.x%20yum%E5%AE%89%E8%A3%85mysql5.7/</loc>
     
-    <lastmod>2017-07-29T09:47:53.242Z</lastmod>
+    <lastmod>2017-08-12T08:44:58.173Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wwww.galigeigei.org/jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5tomcat/</loc>
+    
+    <lastmod>2017-08-12T08:44:50.900Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://wwww.galigeigei.org/about/index.html</loc>
     
     <lastmod>2017-07-20T19:29:49.368Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wwww.galigeigei.org/CentOS6.x%20yum%E5%AE%89%E8%A3%85mysql5.7/</loc>
-    
-    <lastmod>2017-07-20T19:10:17.695Z</lastmod>
     
   </url>
   

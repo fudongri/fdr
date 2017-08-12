@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>独孤一条狗 | blog</title>
-  <subtitle>java疯子</subtitle>
+  <subtitle>java</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wwww.galigeigei.org/"/>
-  <updated>2017-08-02T16:08:46.586Z</updated>
+  <updated>2017-08-12T08:44:50.900Z</updated>
   <id>http://wwww.galigeigei.org/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wwww.galigeigei.org/jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5tomcat/"/>
     <id>http://wwww.galigeigei.org/jvisualvm远程连接tomcat/</id>
     <published>2017-08-02T14:05:15.000Z</published>
-    <updated>2017-08-02T16:08:46.586Z</updated>
+    <updated>2017-08-12T08:44:50.900Z</updated>
     
     <content type="html"><![CDATA[<h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4><ul>
 <li>在tomcat的catalina.sh文件中加入<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS="-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false</div><div class="line"> -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.1.101"</div></pre></td></tr></table></figure>
@@ -69,7 +69,7 @@
     <link href="http://wwww.galigeigei.org/CentOS6.x%20%20mysql5.7%E5%AE%9E%E7%8E%B0%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5/"/>
     <id>http://wwww.galigeigei.org/CentOS6.x  mysql5.7实现主从同步/</id>
     <published>2017-07-21T15:42:23.000Z</published>
-    <updated>2017-07-29T09:47:53.242Z</updated>
+    <updated>2017-08-12T08:45:03.290Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h4><ul>
 <li>一台Master服务器 192.168.1.101</li>
@@ -128,7 +128,7 @@
     <link href="http://wwww.galigeigei.org/CentOS6.x%20yum%E5%AE%89%E8%A3%85mysql5.7/"/>
     <id>http://wwww.galigeigei.org/CentOS6.x yum安装mysql5.7/</id>
     <published>2017-07-20T15:42:23.000Z</published>
-    <updated>2017-07-20T19:10:17.695Z</updated>
+    <updated>2017-08-12T08:44:58.173Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-安装yum源"><a href="#1-安装yum源" class="headerlink" title="1.安装yum源"></a>1.安装yum源</h4><ul>
 <li><p>下载yum源的rpm包<br><code>wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm</code></p>
