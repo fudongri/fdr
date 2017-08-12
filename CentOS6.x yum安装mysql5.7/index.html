@@ -225,6 +225,7 @@ var _hmt = _hmt || [];
         <a class="article-category-link" href="/categories/mysql/">mysql</a>
     </div>
 
+			共有:<span id="/CentOS6.x yum安装mysql5.7/" class="leancloud_visitors" data-flag-title="CentOS6.x yum安装mysql5.7"></span>人围观
                     </div>
                 
             </header>
@@ -356,6 +357,46 @@ var _hmt = _hmt || [];
         </div>
     </div>
 </footer>
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'pSAkb25vPYPf85OidGLy5fUQ-gzGzoHsz';
+    var APP_KEY = '1slNMgrnnogCPxNuenBi3zy4';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+    // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
 
         
     
