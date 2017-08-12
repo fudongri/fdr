@@ -675,7 +675,7 @@ code {
 #profile .inner .base-info #location {
   font-size: 12px;
   margin-top: 5px;
-  color: #9a9ea3;
+  color: #565a5f;
 }
 #profile .inner .base-info #location .fa {
   margin-right: 5px;
@@ -713,7 +713,7 @@ code {
 #profile .inner .article-info .article-info-block {
   width: 50%;
   float: left;
-  padding: 20px 15px;
+  padding: 10px 15px;
   text-align: center;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
