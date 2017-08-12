@@ -5,18 +5,18 @@
     
     <title>CentOS6.x  mysql5.7实现主从同步 | 独孤一条狗 | blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="1.环境准备 一台Master服务器 192.168.1.101 一台Slave服务器（多个从节点同理）　192.168.1.102 Mysql官方文档">
+    <meta name="description" content="1.环境准备">
 <meta name="keywords" content="CentOS,Mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS6.x  mysql5.7实现主从同步">
 <meta property="og:url" content="http://wwww.galigeigei.org/CentOS6.x  mysql5.7实现主从同步/index.html">
 <meta property="og:site_name" content="独孤一条狗 | blog">
-<meta property="og:description" content="1.环境准备 一台Master服务器 192.168.1.101 一台Slave服务器（多个从节点同理）　192.168.1.102 Mysql官方文档">
+<meta property="og:description" content="1.环境准备">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-12T08:45:03.290Z">
+<meta property="og:updated_time" content="2017-08-12T10:01:29.475Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS6.x  mysql5.7实现主从同步">
-<meta name="twitter:description" content="1.环境准备 一台Master服务器 192.168.1.101 一台Slave服务器（多个从节点同理）　192.168.1.102 Mysql官方文档">
+<meta name="twitter:description" content="1.环境准备">
     
 
     
@@ -233,11 +233,11 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h4 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h4><ul>
+            <h4 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h4><a id="more"></a>
+<ul>
 <li>一台Master服务器 192.168.1.101</li>
 <li>一台Slave服务器（多个从节点同理）　192.168.1.102<br> <a href="https://dev.mysql.com/doc/refman/5.7/en/replication-configuration.html" target="_blank" rel="external">Mysql官方文档</a></li>
 </ul>
-<a id="more"></a>
 <h4 id="2-配置Master"><a href="#2-配置Master" class="headerlink" title="2.配置Master"></a>2.配置Master</h4><ul>
 <li><p>开启二进制日志，配置server_id<br><code>vim /etc/my.cnf</code><br>在[mysqld]下增加如下配置，并<strong>重启myql</strong>服务，重启完成之后，我们可以通过<code>show variables like &#39;%log_bin%&#39;;</code>查看二进制日志的ON/OFF状态</p>
 <figure class="highlight profile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">log-bin=mysqlbin-log</div><div class="line">server_id=<span class="number">101</span> #server_id唯一即可，一般取ip尾号</div></pre></td></tr></table></figure>
