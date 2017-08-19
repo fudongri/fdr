@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wwww.galigeigei.org/tags/index.html</loc>
+    
+    <lastmod>2017-08-19T13:08:14.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wwww.galigeigei.org/categories/index.html</loc>
+    
+    <lastmod>2017-08-19T13:07:44.969Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wwww.galigeigei.org/jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5tomcat/</loc>
     
     <lastmod>2017-08-19T12:06:42.498Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>http://wwww.galigeigei.org/about/index.html</loc>
     
     <lastmod>2017-07-20T19:29:49.368Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wwww.galigeigei.org/tags/index.html</loc>
-    
-    <lastmod>2017-07-18T19:53:39.524Z</lastmod>
     
   </url>
   
