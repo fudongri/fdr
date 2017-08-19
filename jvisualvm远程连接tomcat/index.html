@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="方法1：JMX连接">
+<meta name="description" content="方法1：JMX连接 在tomcat的catalina.sh文件中加入12JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hos">
 <meta name="keywords" content="jvisualVM,tomcat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jvisualvm远程连接tomcat">
 <meta property="og:url" content="http://wwww.galigeigei.org/jvisualvm远程连接tomcat/index.html">
 <meta property="og:site_name" content="Round The Clock">
-<meta property="og:description" content="方法1：JMX连接">
+<meta property="og:description" content="方法1：JMX连接 在tomcat的catalina.sh文件中加入12JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hos">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-12T10:00:41.228Z">
+<meta property="og:updated_time" content="2017-08-19T12:06:42.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jvisualvm远程连接tomcat">
-<meta name="twitter:description" content="方法1：JMX连接">
+<meta name="twitter:description" content="方法1：JMX连接 在tomcat的catalina.sh文件中加入12JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hos">
 
 
 
@@ -386,13 +386,12 @@
       
 
       
-        <h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4><a id="more"></a>
-<ul>
+        <h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4><ul>
 <li>在tomcat的catalina.sh文件中加入<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS="-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false</div><div class="line"> -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.1.101"</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
-<p> <strong>说明：</strong><br>-Dcom.sun.management.jmxremote.port 远程连接端口<br>-Dcom.sun.management.jmxremote.ssl=false  是否启用ssl<br>-Dcom.sun.management.jmxremote.authenticate=false   是否需要用户名密码认证<br>-Djava.rmi.server.hostname  服务器的ip</p>
+<p> <strong>说明：</strong><br> -Dcom.sun.management.jmxremote.port 远程连接端口<br> -Dcom.sun.management.jmxremote.ssl=false  是否启用ssl<br> -Dcom.sun.management.jmxremote.authenticate=false   是否需要用户名密码认证<br> -Djava.rmi.server.hostname  服务器的ip</p>
 </blockquote>
 <ul>
 <li><p>开放端口<br>这里有个坑，不仅需要开放配置的远程的连接的端口，JMXserver还会监听几个随机端口。。不废话，看操作<br><code>netstat -tupln | grep 7070</code></p>

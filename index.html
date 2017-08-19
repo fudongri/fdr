@@ -386,7 +386,10 @@
 
       
         
-          <h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4>
+          
+          方法1：JMX连接
+在tomcat的catalina.sh文件中加入12JAVA_OPTS="-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/jvisualvm远程连接tomcat/#more" rel="contents">
@@ -532,7 +535,14 @@
 
       
         
-          <h4 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h4>
+          
+          1.环境准备
+一台Master服务器 192.168.1.101
+一台Slave服务器（多个从节点同理）　192.168.1.102 Mysql官方文档
+
+2.配置Master
+开启二进制日志，配置server_idvim /etc/my.cnf在[mysqld]下增加如下配置，并重启myql服务，
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/CentOS6.x  mysql5.7实现主从同步/#more" rel="contents">
@@ -678,7 +688,12 @@
 
       
         
-          <h4 id="1-安装yum源"><a href="#1-安装yum源" class="headerlink" title="1.安装yum源"></a>1.安装yum源</h4>
+          
+          1.安装yum源
+下载yum源的rpm包 wget --no-check-certificate https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm
+
+安装rpm包 yum localinstall -y mys
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/CentOS6.x yum安装mysql5.7/#more" rel="contents">
