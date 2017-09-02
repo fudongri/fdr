@@ -1,0 +1,28 @@
+body {
+    background-image: url("../images/bg.jpg");
+}
+
+#container {
+    margin: 0 auto;
+    width: 1024px;
+    /*border: 1px solid #F00*/
+}
+
+.image {
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px #888888;
+}
+
+img {
+    padding: 10px;
+}
+
+.bg1 {
+    background-image: url("../images/bg1.jpg");
+}
