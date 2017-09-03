@@ -167,11 +167,11 @@ function clickPk() {//比牌
         if (result) {
             localStorage.setItem("me", parseInt(localStorage.getItem("me")) + total);
             redrawMoneyBtn();
-            resetCenterText("you win!!恭喜你，击败辣鸡掌门");
+            resetCenterText("恭喜你，击败辣鸡掌门,3s后看掌门表演");
         } else {
             localStorage.setItem("zm", parseInt(localStorage.getItem("zm")) + total);
             redrawMoneyBtn();
-            resetCenterText("you lose!!很遗憾，再接再厉");
+            resetCenterText("很遗憾，再接再厉,3s后看掌门表演");
         }
         canvas.removeEventListener("click", clickView, false);
         canvas.removeEventListener("click", clickPk, false);
@@ -184,7 +184,7 @@ function clickPk() {//比牌
             document.getElementById("container").style.width = "100%";
             document.getElementById("show").style.display = "block";//zhangmen show
             // location.href = mainPagePath;
-        }, 1500);
+        }, 3000);
     }
     ctx.closePath();
 
