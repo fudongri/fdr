@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wwww.galigeigei.org/"/>
-  <updated>2017-08-19T12:06:42.498Z</updated>
+  <updated>2017-10-28T01:25:43.701Z</updated>
   <id>http://wwww.galigeigei.org/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wwww.galigeigei.org/2017/jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5tomcat/"/>
     <id>http://wwww.galigeigei.org/2017/jvisualvm远程连接tomcat/</id>
     <published>2017-08-02T14:05:15.000Z</published>
-    <updated>2017-08-19T12:06:42.498Z</updated>
+    <updated>2017-10-28T01:25:43.701Z</updated>
     
     <content type="html"><![CDATA[<h4 id="方法1：JMX连接"><a href="#方法1：JMX连接" class="headerlink" title="方法1：JMX连接"></a>方法1：JMX连接</h4><ul>
 <li>在tomcat的catalina.sh文件中加入<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS="-Dcom.sun.management.jmxremote.port=7070 -Dcom.sun.management.jmxremote.ssl=false</div><div class="line"> -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.1.101"</div></pre></td></tr></table></figure>
@@ -37,7 +37,7 @@
 </li>
 </ul>
 <blockquote>
-<p>我们需要把这些端口在防火墙中全部开放，然而每次重启tomcat这些端口又全变了，然后你懂的。。当然你可以选择直接关闭防火墙，后果自负。。</p>
+<p>我们需要把这些端口在防火墙中全部开放，然而每次重启tomcat这些端口又全变了，所以没有影响的情况下可以直接关闭防火墙。</p>
 </blockquote>
 <ul>
 <li>客户端连接<br>最后就可以在我们本地JAVA HOME的bin目录打开jvisualvm.exe选择<code>文件--&gt;添加JMX连接</code>，输入ip端口连接就行了</li>
